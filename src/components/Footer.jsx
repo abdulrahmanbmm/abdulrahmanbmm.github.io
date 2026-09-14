@@ -15,17 +15,19 @@ export default function Footer() {
           <span style={{ fontWeight: 800, fontSize: '1.1rem' }}>{profileData.name}</span>
         </div>
 
-        <p style={{ maxWidth: '520px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-          Senior Software Engineer · Full-Stack & Mobile Developer · Digital Entrepreneur. Architecting production cloud backends, real-time systems, and high-conversion products.
+        <p style={{ maxWidth: '580px', fontSize: '0.9rem', color: 'var(--text-secondary)', textAlign: 'center' }}>
+          Senior Software Engineer · Full-Stack &amp; Mobile Developer · Systems Architect. Bridging complex software engineering and high-growth business strategy with Laravel, React Native, and AI automation.
         </p>
 
         <div className="footer-links">
           <a href="#hero" className="footer-link">Overview</a>
           <a href="#pitch" className="footer-link">Summary</a>
+          <a href="#services" className="footer-link">Services</a>
           <a href="#skills" className="footer-link">Skills</a>
           <a href="#projects" className="footer-link">Case Studies</a>
           <a href="#experience" className="footer-link">Experience</a>
-          <a href="#leadership" className="footer-link">Leadership</a>
+          <a href="#credentials" className="footer-link">Credentials</a>
+          <a href="#testimonials" className="footer-link">Reviews</a>
           <a href="#contact" className="footer-link">Contact</a>
         </div>
 
@@ -68,7 +70,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-copy">
-          © {new Date().getFullYear()} Abdulrahman Bello. All rights reserved. Built with React & Vite.
+          © {new Date().getFullYear()} Abdulrahman Bello. All rights reserved. Engineered for performance and impact.
         </div>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun, Download, Menu, X, Terminal } from 'lucide-react';
+import { Moon, Sun, Download, Menu, X } from 'lucide-react';
 import { profileData } from '../data/profileData';
 
 export default function Navbar({ theme, toggleTheme }) {
@@ -11,7 +11,7 @@ export default function Navbar({ theme, toggleTheme }) {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
 
-      const sections = ['hero', 'pitch', 'skills', 'projects', 'experience', 'leadership', 'credentials', 'contact'];
+      const sections = ['hero', 'pitch', 'services', 'skills', 'projects', 'experience', 'credentials', 'testimonials', 'contact'];
       const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {
@@ -34,10 +34,12 @@ export default function Navbar({ theme, toggleTheme }) {
   const navItems = [
     { id: 'hero', label: 'Overview' },
     { id: 'pitch', label: 'Summary' },
+    { id: 'services', label: 'Services' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Case Studies' },
     { id: 'experience', label: 'Experience' },
-    { id: 'leadership', label: 'Leadership' },
+    { id: 'credentials', label: 'Credentials' },
+    { id: 'testimonials', label: 'Reviews' },
     { id: 'contact', label: 'Contact' }
   ];
 

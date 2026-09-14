@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, Layers, AlertCircle, Cpu } from 'lucide-react';
+import { X, Layers, AlertCircle, Cpu, Play, ExternalLink, Globe } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
   useEffect(() => {
@@ -34,6 +34,44 @@ export default function ProjectModal({ project, onClose }) {
             <X size={20} />
           </button>
         </div>
+
+        {/* Live Store & Deployment Links */}
+        {(project.playStoreUrl || project.appStoreUrl || project.liveUrl) && (
+          <div className="modal-actions-bar">
+            {project.playStoreUrl && (
+              <a
+                href={project.playStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary btn-store"
+              >
+                <Play size={15} fill="currentColor" />
+                <span>Google Play Store</span>
+              </a>
+            )}
+            {project.appStoreUrl && (
+              <a
+                href={project.appStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary btn-store"
+              >
+                <span> Apple App Store</span>
+              </a>
+            )}
+            {project.liveUrl && !project.playStoreUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary btn-store"
+              >
+                <Globe size={15} />
+                <span>Visit Live Platform</span>
+              </a>
+            )}
+          </div>
+        )}
 
         <p className="modal-summary">{project.summary}</p>
 

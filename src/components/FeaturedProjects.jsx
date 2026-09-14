@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowRight, ExternalLink, Play, Globe } from 'lucide-react';
 import { projectsData } from '../data/projectsData';
 import ProjectModal from './ProjectModal';
 
@@ -9,10 +9,10 @@ export default function FeaturedProjects() {
 
   const filterOptions = [
     { id: 'all', label: 'All Projects' },
-    { id: 'mobile', label: 'Mobile (React Native)' },
+    { id: 'mobile', label: 'Mobile (iOS & Android)' },
     { id: 'cloud', label: 'Backend & Cloud' },
-    { id: 'realtime', label: 'Real-Time & WebRTC' },
-    { id: 'fintech', label: 'FinTech & Payments' }
+    { id: 'realtime', label: 'Real-Time & Telemedicine' },
+    { id: 'fintech', label: 'FinTech & Marketplaces' }
   ];
 
   const filteredProjects = activeFilter === 'all'
@@ -23,12 +23,12 @@ export default function FeaturedProjects() {
     <section id="projects" className="section">
       <div className="container">
         <div className="section-header">
-          <div className="section-badge">Case Studies & Architecture</div>
+          <div className="section-badge">Case Studies & Production Builds</div>
           <h2 className="section-title">
-            Featured Works & <span className="section-title-highlight">Production Systems</span>
+            Featured Works & <span className="section-title-highlight">Live Platforms</span>
           </h2>
           <p className="section-description">
-            Selected projects demonstrating end-to-end engineering excellence — from real-time WebRTC healthcare platforms to resilient multi-gateway payment backends.
+            Production systems built for scale — including cross-border telemedicine on Google Play & App Store, digital marketplaces, and high-concurrency payment backends.
           </p>
         </div>
 
@@ -85,6 +85,47 @@ export default function FeaturedProjects() {
                   </span>
                 )}
               </div>
+
+              {/* Live Links Action Bar if available */}
+              {(project.playStoreUrl || project.appStoreUrl || project.liveUrl) && (
+                <div className="project-live-links-bar">
+                  {project.playStoreUrl && (
+                    <a
+                      href={project.playStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="store-pill playstore"
+                      title="View on Google Play Store"
+                    >
+                      <Play size={13} fill="currentColor" />
+                      <span>Google Play</span>
+                    </a>
+                  )}
+                  {project.appStoreUrl && (
+                    <a
+                      href={project.appStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="store-pill appstore"
+                      title="View on Apple App Store"
+                    >
+                      <span> App Store</span>
+                    </a>
+                  )}
+                  {project.liveUrl && !project.playStoreUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="store-pill weblink"
+                      title="Visit Live Web Platform"
+                    >
+                      <Globe size={13} />
+                      <span>Live Site</span>
+                    </a>
+                  )}
+                </div>
+              )}
 
               {/* Card Footer */}
               <div className="project-card-footer">

@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import QuickPitch from './components/QuickPitch';
+import Services from './components/Services';
 import SkillsMatrix from './components/SkillsMatrix';
 import FeaturedProjects from './components/FeaturedProjects';
 import Experience from './components/Experience';
 import Leadership from './components/Leadership';
 import Education from './components/Education';
+import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { CheckCircle } from 'lucide-react';
@@ -45,11 +47,13 @@ export default function App() {
           document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
         }} />
         <QuickPitch />
+        <Services />
         <SkillsMatrix />
         <FeaturedProjects />
         <Experience />
         <Leadership />
         <Education />
+        <Testimonials />
         <Contact onShowToast={showToast} />
       </main>
 

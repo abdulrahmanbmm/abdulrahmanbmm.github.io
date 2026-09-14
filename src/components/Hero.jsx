@@ -81,8 +81,8 @@ export default function Hero({ onOpenContact }) {
                 <div className="portrait-tags">
                   <span>Laravel</span>
                   <span>React Native</span>
-                  <span>Node.js</span>
-                  <span>WebRTC</span>
+                  <span>Cloud & AI</span>
+                  <span>FinTech</span>
                 </div>
               </div>
             </div>
