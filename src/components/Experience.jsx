@@ -1,8 +1,8 @@
 import React from 'react';
-import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, Camera } from 'lucide-react';
 import { profileData } from '../data/profileData';
 
-export default function Experience() {
+export default function Experience({ onOpenPhoto }) {
   return (
     <section id="experience" className="section">
       <div className="container">
@@ -49,6 +49,32 @@ export default function Experience() {
                     </span>
                   ))}
                 </div>
+
+                {exp.posterImage && onOpenPhoto && (
+                  <div style={{ marginTop: '1rem', paddingTop: '0.85rem', borderTop: '1px dashed var(--border-subtle)' }}>
+                    <button
+                      type="button"
+                      className="award-photo-trigger-btn"
+                      onClick={() => onOpenPhoto({
+                        url: exp.posterImage,
+                        title: exp.posterTitle,
+                        subtitle: `${exp.company} · ${exp.role}`,
+                        date: exp.period,
+                        badge: 'Keynote Announcement',
+                        caption: 'Official launch event poster featuring Abdulrahman Bello as Technical Head and Speaker.'
+                      })}
+                      title="View official launch keynote poster"
+                    >
+                      <div className="award-thumb-frame">
+                        <img src={exp.posterImage} alt={exp.posterTitle} className="award-thumb-img" />
+                      </div>
+                      <span className="award-photo-text">
+                        <Camera size={13} style={{ display: 'inline', marginRight: '4px', verticalAlign: '-1px' }} />
+                        View Launch Event Poster
+                      </span>
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           ))}

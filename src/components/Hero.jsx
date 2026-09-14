@@ -66,7 +66,19 @@ export default function Hero({ onOpenContact }) {
           </div>
 
           <div className="hero-visual">
-            <div className="portrait-frame">
+            <div 
+              className="portrait-frame"
+              style={{ cursor: onOpenPhoto ? 'pointer' : 'default' }}
+              onClick={() => onOpenPhoto && onOpenPhoto({
+                url: profileData.avatarUrl,
+                title: profileData.name,
+                subtitle: "Senior Software Engineer · Full-Stack & Mobile Developer",
+                date: "2025",
+                badge: "Executive Studio Portrait",
+                caption: "Abdulrahman Bello — Senior Software Engineer, Full-Stack & Mobile Developer, Systems Architect with 7+ years building high-concurrency systems."
+              })}
+              title="Click to view full portrait"
+            >
               <div className="portrait-img-box">
                 <img
                   src={profileData.avatarUrl}

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Users, Award, Compass } from 'lucide-react';
+import { Users, Award, Compass, Camera } from 'lucide-react';
 import { profileData } from '../data/profileData';
 
-export default function Leadership() {
+export default function Leadership({ onOpenPhoto }) {
   const icons = [Users, Compass, Award];
 
   return (
@@ -32,6 +32,32 @@ export default function Leadership() {
                 <h3 className="leadership-role">{item.role}</h3>
                 <div className="leadership-org">{item.organization}</div>
                 <p className="leadership-desc">{item.description}</p>
+
+                {item.certificateImage && onOpenPhoto && (
+                  <div style={{ marginTop: '1rem', paddingTop: '0.85rem', borderTop: '1px dashed var(--border-subtle)' }}>
+                    <button
+                      type="button"
+                      className="award-photo-trigger-btn"
+                      onClick={() => onOpenPhoto({
+                        url: item.certificateImage,
+                        title: item.certificateTitle || item.role,
+                        subtitle: item.organization,
+                        date: item.period,
+                        badge: 'Elected Mandate',
+                        caption: 'Official signed and sealed Certificate of Return certifying Bello Mujitaba Abdulrahman as Director of Software.'
+                      })}
+                      title="View official certificate of return"
+                    >
+                      <div className="award-thumb-frame">
+                        <img src={item.certificateImage} alt={item.role} className="award-thumb-img" />
+                      </div>
+                      <span className="award-photo-text">
+                        <Camera size={13} style={{ display: 'inline', marginRight: '4px', verticalAlign: '-1px' }} />
+                        View Certificate of Return
+                      </span>
+                    </button>
+                  </div>
+                )}
               </div>
             );
           })}

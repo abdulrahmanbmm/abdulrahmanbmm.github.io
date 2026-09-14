@@ -15,7 +15,8 @@ export const profileData = {
   website: "https://abdulrahmanbmm.github.io",
   resumePdf: "Abdulrahman_Bello_Resume.pdf",
   coverLetterPdf: "Abdulrahman_Bello_CoverLetter.pdf",
-  avatarUrl: "images/about.jpg",
+  avatarUrl: "images/IMG_6333.jpg",
+  avatarAltUrl: "images/about.jpg",
   availabilityStatus: "Open to Senior Software Engineer, Lead Mobile & Full-Stack Architect roles",
 
   metrics: [
@@ -264,6 +265,8 @@ export const profileData = {
       company: "Sells Rocket",
       location: "Nigeria · Remote",
       period: "Jul 2022 – Sep 2023 · 1 yr 3 mos",
+      posterImage: "images/sellsrocket_will_be_there_me2.jpg",
+      posterTitle: "Sells Rocket Official Launch — Technical Head & Speaker",
       highlights: [
         "Developed scalable marketplace backend services and database optimization strategies that improved platform query response times.",
         "Collaborated on automated sales funnels, affiliate commission settlements, and digital product distribution pipelines."
@@ -318,6 +321,8 @@ export const profileData = {
       role: "Director of Software (ATBU Chapter)",
       organization: "Nigeria Association of Computing Students (NACOS ATBU)",
       period: "Dec 2019 – Dec 2020 · 1 yr 1 mo",
+      certificateImage: "images/FB_IMG_8001889145854478718.jpg",
+      certificateTitle: "Official Certificate of Return as Elected Director of Software",
       description: "Managed internal campus software projects, organized code competitions, and facilitated software engineering workshops."
     }
   ],
@@ -357,28 +362,87 @@ export const profileData = {
 
   awards: [
     {
+      id: "digital-architect",
       title: "Digital Architect",
-      issuer: "Arewa Digital Marketers",
+      issuer: "Arewa Digital Marketers Summit & Sells Rocket",
+      location: "Kaduna, Nigeria",
       date: "Dec 2023",
-      note: "Recognized for architecting scalable full-stack and marketplace systems associated with Sells Rocket."
+      badge: "Crystal Trophy",
+      note: "Conferred the prestigious Digital Architect crystal trophy for architecting high-scale marketplace infrastructure, payment routing pipelines, and automated growth funnels.",
+      image: "images/Webinar_New_Hausa).png",
+      gallery: [
+        {
+          url: "images/Webinar_New_Hausa).png",
+          title: "Digital Architect Crystal Trophy",
+          caption: "Abdulrahman Bello raising the crystal Digital Architect trophy on stage at the Arewa Digital Marketers & Tech Summit in Kaduna."
+        },
+        {
+          url: "images/Webinar_New_Hausa_.png",
+          title: "Stage Award Ceremony Presentation",
+          caption: "Receiving the Digital Architect honor on stage before summit attendees, tech founders, and industry leaders."
+        }
+      ]
     },
     {
+      id: "digital-innovator",
       title: "Digital Innovator",
-      issuer: "Student Union Government, ATBU",
-      date: "Jan 2023",
-      note: "Honored for pioneering student educational technology platforms and impactful developer community initiatives."
+      issuer: "Students' Union Government (SUG), ATBU",
+      location: "Bauchi, Nigeria",
+      date: "2020 / 2021",
+      badge: "Plaque & Stage Presentation",
+      note: "Presented with the official framed Award of Merit as Digital Innovator for pioneering educational platforms, campus software solutions, and developer advocacy.",
+      image: "images/IMG_9035.jpg",
+      gallery: [
+        {
+          url: "images/IMG_9035.jpg",
+          title: "Award of Merit Stage Presentation",
+          caption: "Receiving the official framed Digital Innovator plaque on stage from the Students' Union Government executive leaders."
+        },
+        {
+          url: "images/-q7y9ae.jpg",
+          title: "Digital Innovator Glass Plaque",
+          caption: "Official SUG ATBU Award of Merit plaque presented to Bello Mujitaba Abdulrahman as Digital Innovator."
+        }
+      ]
     },
     {
+      id: "best-techie-math",
       title: "Best Techie of the Year",
       issuer: "Final Year Forum, Dept. of Mathematical Sciences, ATBU",
-      date: "2024",
-      note: "Awarded as the most distinguished tech innovator and developer by the university's final year academic forum."
+      location: "Bauchi, Nigeria",
+      date: "2020 / 2021",
+      badge: "Award of Excellence",
+      note: "Voted and awarded the distinguished Award of Excellence for extraordinary technical leadership, peer software training, and cross-platform application design.",
+      image: "images/FB_IMG_2351136224051011138.jpg",
+      gallery: [
+        {
+          url: "images/FB_IMG_2351136224051011138.jpg",
+          title: "Holding the Award of Excellence",
+          caption: "Abdulrahman Bello holding the framed Best Techie of the Year Award of Excellence plaque."
+        },
+        {
+          url: "images/FB_IMG_5557612416633510468.jpg",
+          title: "Faculty Award Handover Ceremony",
+          caption: "On-stage hand-in-hand award handover ceremony with university professors, lecturers, and departmental officials."
+        }
+      ]
     },
     {
-      title: "Best Techie of the Year",
+      id: "best-techie-nacos",
+      title: "The Techie of the Year",
       issuer: "Nigeria Association of Computing Students (NACOS ATBU)",
-      date: "2023",
-      note: "Voted Techie of the Year by computing students in recognition of outstanding software craftsmanship and leadership."
+      location: "Bauchi, Nigeria",
+      date: "2022 / 2023",
+      badge: "Departmental Honor",
+      note: "Honored by computing and computer science students for software development contributions, technical mentorship, and open-source leadership.",
+      image: "images/deg1ja.jpg",
+      gallery: [
+        {
+          url: "images/deg1ja.jpg",
+          title: "Techie of the Year Stage Presentation",
+          caption: "Receiving the official Techie of the Year certificate surrounded by university faculty, lecturers, and NACOS executives."
+        }
+      ]
     }
   ],
 
@@ -671,7 +735,45 @@ export const profileData = {
       category: "design",
       credentialId: "KQRUTGRCQJ86",
       url: "https://www.coursera.org/account/accomplishments/specialization/certificate/KQRUTGRCQJ86",
+      image: "images/FB_IMG_8194572086170566138.jpg",
+      hasPhysicalCert: true,
       skills: ["Color Theory", "Visual Hierarchy", "Typography & Spacing"]
+    },
+    {
+      title: "Intel Edge AI Scholarship: OpenVINO Fundamentals",
+      issuer: "Udacity & Intel",
+      date: "2020",
+      category: "ai",
+      image: "images/FB_IMG_6742238544956886845.jpg",
+      hasPhysicalCert: true,
+      skills: ["Computer Vision", "Intel OpenVINO", "Edge AI", "Deep Learning Inference"]
+    },
+    {
+      title: "NACOS Leadership Summit Certificate of Participation",
+      issuer: "Nigeria Association of Computing Students (NACOS ATBU)",
+      date: "Dec 2022",
+      category: "mobile",
+      image: "images/-g1wy0t.jpg",
+      hasPhysicalCert: true,
+      skills: ["Leadership", "Community Building", "Developer Advocacy"]
+    },
+    {
+      title: "NACOSS National Annual Conference & Hackathon",
+      issuer: "Nigeria Association of Computer Science Students (National)",
+      date: "2018",
+      category: "mobile",
+      image: "images/n42koo.jpg",
+      hasPhysicalCert: true,
+      skills: ["Hackathons", "Competitive Programming", "Software Craftsmanship"]
+    },
+    {
+      title: "Director of Software — Official Certificate of Return",
+      issuer: "NACOS ATBU Electoral Commission",
+      date: "2021 / 2022",
+      category: "mobile",
+      image: "images/FB_IMG_8001889145854478718.jpg",
+      hasPhysicalCert: true,
+      skills: ["Elected Leadership", "Software Direction", "Campus Governance"]
     },
     {
       title: "Build an E-commerce Dashboard with Figma",
@@ -681,6 +783,175 @@ export const profileData = {
       credentialId: "DWJN2GGFGYZ5",
       url: "https://www.coursera.org/account/accomplishments/certificate/DWJN2GGFGYZ5",
       skills: ["UI Prototyping", "Dashboard Design", "Design Systems"]
+    }
+  ],
+
+  // Complete visual archive of all 15 authentic proof moments, awards, ceremonies, and credentials
+  honorsMoments: [
+    {
+      id: "digital-architect-trophy",
+      title: "Digital Architect Crystal Trophy",
+      subtitle: "Arewa Digital Marketers Summit 2023",
+      category: "awards",
+      categoryLabel: "Trophies & Stage",
+      badge: "Crystal Trophy",
+      date: "Dec 2023",
+      url: "images/Webinar_New_Hausa).png",
+      caption: "Abdulrahman Bello holding high the prestigious crystal Digital Architect trophy on stage at the Arewa Digital Marketers & Tech Summit in Kaduna."
+    },
+    {
+      id: "digital-architect-handover",
+      title: "Digital Architect Stage Ceremony",
+      subtitle: "Arewa Digital Marketers Summit 2023",
+      category: "awards",
+      categoryLabel: "Trophies & Stage",
+      badge: "Stage Ceremony",
+      date: "Dec 2023",
+      url: "images/Webinar_New_Hausa_.png",
+      caption: "Receiving the Digital Architect crystal trophy during the official honors ceremony before tech leaders and attendees."
+    },
+    {
+      id: "digital-innovator-stage",
+      title: "Digital Innovator Award Handover",
+      subtitle: "Students' Union Government (SUG), ATBU",
+      category: "awards",
+      categoryLabel: "Trophies & Stage",
+      badge: "Stage Presentation",
+      date: "2020 / 2021",
+      url: "images/IMG_9035.jpg",
+      caption: "Abdulrahman Bello receiving the framed Digital Innovator Award on stage from the university student union leadership."
+    },
+    {
+      id: "digital-innovator-plaque",
+      title: "Digital Innovator — Framed Plaque",
+      subtitle: "Students' Union Government (SUG), ATBU",
+      category: "awards",
+      categoryLabel: "Trophies & Stage",
+      badge: "Award of Merit",
+      date: "2020 / 2021",
+      url: "images/-q7y9ae.jpg",
+      caption: "Official framed glass plaque: Award of Merit presented to Bello Mujitaba Abdulrahman as Digital Innovator."
+    },
+    {
+      id: "best-techie-portrait",
+      title: "Award of Excellence — Best Techie",
+      subtitle: "Dept. of Mathematical Sciences, ATBU",
+      category: "awards",
+      categoryLabel: "Trophies & Stage",
+      badge: "Award of Excellence",
+      date: "2020 / 2021",
+      url: "images/FB_IMG_2351136224051011138.jpg",
+      caption: "Abdulrahman Bello holding the framed Best Techie of the Year Award of Excellence plaque."
+    },
+    {
+      id: "best-techie-ceremony",
+      title: "Faculty Award Handover Ceremony",
+      subtitle: "Dept. of Mathematical Sciences, ATBU",
+      category: "awards",
+      categoryLabel: "Trophies & Stage",
+      badge: "Stage Ceremony",
+      date: "2020 / 2021",
+      url: "images/FB_IMG_5557612416633510468.jpg",
+      caption: "Receiving the framed Best Techie of the Year Award hand-in-hand with university professors and department officials."
+    },
+    {
+      id: "nacos-techie-stage",
+      title: "The Techie of the Year — NACOS",
+      subtitle: "Nigeria Association of Computing Students (NACOS ATBU)",
+      category: "awards",
+      categoryLabel: "Trophies & Stage",
+      badge: "Departmental Honor",
+      date: "2022 / 2023",
+      url: "images/deg1ja.jpg",
+      caption: "Abdulrahman Bello receiving 'The Techie of the Year' certificate on stage, surrounded by university faculty and student executives."
+    },
+    {
+      id: "cert-intel-ai",
+      title: "Intel Edge AI Scholarship Certificate",
+      subtitle: "Udacity & Intel OpenVINO",
+      category: "certs",
+      categoryLabel: "Certificates & Diplomas",
+      badge: "AI Nanodegree",
+      date: "2020",
+      url: "images/FB_IMG_6742238544956886845.jpg",
+      caption: "Official Udacity & Intel scholarship certificate for Edge AI & OpenVINO deep learning deployment awarded to Abdulrahman Bello."
+    },
+    {
+      id: "cert-graphic-design",
+      title: "Graphic Design Specialization Certificate",
+      subtitle: "University of Colorado Boulder (Coursera)",
+      category: "certs",
+      categoryLabel: "Certificates & Diplomas",
+      badge: "Specialization",
+      date: "Oct 2020",
+      url: "images/FB_IMG_8194572086170566138.jpg",
+      caption: "Official 4-course Specialization certificate in Graphic Design Elements, Visual Theory & Typography awarded to Abdulrahman Bello."
+    },
+    {
+      id: "cert-nacos-summit",
+      title: "Leadership Summit 2022 Certificate",
+      subtitle: "Nigeria Association of Computing Students (NACOS ATBU)",
+      category: "certs",
+      categoryLabel: "Certificates & Diplomas",
+      badge: "Leadership",
+      date: "Dec 1, 2022",
+      url: "images/-g1wy0t.jpg",
+      caption: "Official Certificate of Participation awarded for distinguished contributions at the NACOS Leadership Summit."
+    },
+    {
+      id: "cert-nacoss-hackathon",
+      title: "National Conference & Hackathon Certificate",
+      subtitle: "Nigeria Association of Computer Science Students (National)",
+      category: "certs",
+      categoryLabel: "Certificates & Diplomas",
+      badge: "National Hackathon",
+      date: "2018",
+      url: "images/n42koo.jpg",
+      caption: "Certificate of Attendance & Participation in the national computing conference and coding hackathon."
+    },
+    {
+      id: "cert-nacos-return",
+      title: "Official Certificate of Return — Director of Software",
+      subtitle: "NACOS ATBU Electoral Commission",
+      category: "leadership",
+      categoryLabel: "Leadership & Engagements",
+      badge: "Elected Mandate",
+      date: "2021 / 2022",
+      url: "images/FB_IMG_8001889145854478718.jpg",
+      caption: "Official signed and sealed Certificate of Return certifying Bello Mujitaba Abdulrahman as duly elected Director of Software."
+    },
+    {
+      id: "poster-sellsrocket",
+      title: "Sells Rocket Official Launch Poster",
+      subtitle: "Sells Rocket — Technical Head & Keynote Speaker",
+      category: "leadership",
+      categoryLabel: "Leadership & Engagements",
+      badge: "Keynote Announcement",
+      date: "2022 / 2023",
+      url: "images/sellsrocket_will_be_there_me2.jpg",
+      caption: "Official launch announcement poster featuring Abdulrahman Bello as Technical Head and Speaker for the Sells Rocket platform."
+    },
+    {
+      id: "portrait-executive",
+      title: "Executive Studio Headshot",
+      subtitle: "Abdulrahman Bello",
+      category: "portraits",
+      categoryLabel: "Studio Portraits",
+      badge: "Executive",
+      date: "2025",
+      url: "images/IMG_6333.jpg",
+      caption: "Abdulrahman Bello — Senior Software Engineer, Full-Stack & Mobile Developer, Systems Architect."
+    },
+    {
+      id: "portrait-developer",
+      title: "Developer Studio Portrait",
+      subtitle: "Abdulrahman Bello",
+      category: "portraits",
+      categoryLabel: "Studio Portraits",
+      badge: "Engineering",
+      date: "2025",
+      url: "images/IMG_6313.jpg",
+      caption: "Abdulrahman Bello — 7+ years building high-concurrency Laravel & React Native systems, cloud infrastructure, and AI workflows."
     }
   ]
 };
