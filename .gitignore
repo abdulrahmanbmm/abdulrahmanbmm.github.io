@@ -1,2 +1,6 @@
-Abdulrahman_Bello_CoverLetter.pdf
-Abdulrahman_Bello_Resume.pdf
+﻿node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+index.html.old_static_backup

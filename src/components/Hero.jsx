@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDownRight, Download, FileText, Mail, Sparkles, Code2, Smartphone } from 'lucide-react';
+import { ArrowDownRight, Download, FileText, Mail, MapPin } from 'lucide-react';
 import { profileData } from '../data/profileData';
 
 export default function Hero({ onOpenContact }) {
@@ -14,11 +14,14 @@ export default function Hero({ onOpenContact }) {
             </div>
 
             <h1 className="hero-title">
-              Hi, I'm <span className="section-title-gradient">{profileData.name}</span>
+              Hi, I'm <span className="hero-name-highlight">{profileData.name}</span>
             </h1>
 
             <div className="hero-subtitle">{profileData.title}</div>
-            <div className="hero-subtag">{profileData.subTitle}</div>
+            <div className="hero-subtag">
+              <MapPin size={15} className="hero-loc-icon" />
+              <span>{profileData.location}</span> · <span>{profileData.subTitle}</span>
+            </div>
 
             <p className="hero-tagline">{profileData.tagline}</p>
 
@@ -33,7 +36,7 @@ export default function Hero({ onOpenContact }) {
                 download="Abdulrahman_Bello_Resume.pdf"
                 className="btn btn-secondary"
               >
-                <Download size={17} />
+                <Download size={16} />
                 <span>Resume (PDF)</span>
               </a>
 
@@ -42,12 +45,12 @@ export default function Hero({ onOpenContact }) {
                 download="Abdulrahman_Bello_CoverLetter.pdf"
                 className="btn btn-secondary"
               >
-                <FileText size={17} />
+                <FileText size={16} />
                 <span>Cover Letter</span>
               </a>
 
               <a href="#contact" className="btn btn-outline" onClick={onOpenContact}>
-                <Mail size={17} />
+                <Mail size={16} />
                 <span>Get In Touch</span>
               </a>
             </div>
@@ -63,32 +66,23 @@ export default function Hero({ onOpenContact }) {
           </div>
 
           <div className="hero-visual">
-            <div className="portrait-card">
-              {/* Floating Tech Chips */}
-              <div className="floating-chip floating-chip-1">
-                <Code2 size={16} color="var(--emerald-400)" />
-                <span>Laravel · Node.js · CI/CD</span>
-              </div>
-
-              <div className="floating-chip floating-chip-2">
-                <Smartphone size={16} color="var(--cyan-400)" />
-                <span>React Native · WebRTC</span>
-              </div>
-
-              <div className="portrait-img-wrapper">
+            <div className="portrait-frame">
+              <div className="portrait-img-box">
                 <img
                   src={profileData.avatarUrl}
                   alt={profileData.name}
                   className="portrait-img"
                   loading="eager"
                 />
-                <div className="portrait-overlay-gradient"></div>
-                <div className="portrait-badge-bottom">
-                  <div>
-                    <div className="portrait-badge-role">Abdulrahman Bello</div>
-                    <div className="portrait-badge-sub">Senior Software Engineer</div>
-                  </div>
-                  <Sparkles size={20} color="var(--emerald-400)" />
+              </div>
+              <div className="portrait-caption">
+                <div className="portrait-name">{profileData.name}</div>
+                <div className="portrait-role">Senior Software Engineer & Architect</div>
+                <div className="portrait-tags">
+                  <span>Laravel</span>
+                  <span>React Native</span>
+                  <span>Node.js</span>
+                  <span>WebRTC</span>
                 </div>
               </div>
             </div>

@@ -32,7 +32,7 @@ export default function SkillsMatrix() {
         <div className="section-header">
           <div className="section-badge">Technical Arsenal</div>
           <h2 className="section-title">
-            Technologies & <span className="section-title-gradient">Core Competencies</span>
+            Technologies & <span className="section-title-highlight">Core Competencies</span>
           </h2>
           <p className="section-description">
             A comprehensive matrix of production-tested languages, frameworks, cloud services, and protocols refined across a decade of engineering.

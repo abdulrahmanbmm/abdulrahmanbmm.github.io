@@ -42,7 +42,7 @@ export default function Contact({ onShowToast }) {
         <div className="section-header">
           <div className="section-badge">Get In Touch</div>
           <h2 className="section-title">
-            Let's Build Something <span className="section-title-gradient">Extraordinary</span>
+            Let's Build Something <span className="section-title-highlight">Extraordinary</span>
           </h2>
           <p className="section-description">
             Available for Senior Software Engineer roles, high-concurrency cloud architecture consulting, and lead mobile development projects.

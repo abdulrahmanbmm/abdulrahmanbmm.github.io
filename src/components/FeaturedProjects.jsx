@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, ExternalLink, Sparkles } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import { projectsData } from '../data/projectsData';
 import ProjectModal from './ProjectModal';
 
@@ -25,7 +25,7 @@ export default function FeaturedProjects() {
         <div className="section-header">
           <div className="section-badge">Case Studies & Architecture</div>
           <h2 className="section-title">
-            Featured Works & <span className="section-title-gradient">Production Systems</span>
+            Featured Works & <span className="section-title-highlight">Production Systems</span>
           </h2>
           <p className="section-description">
             Selected projects demonstrating end-to-end engineering excellence — from real-time WebRTC healthcare platforms to resilient multi-gateway payment backends.
@@ -51,7 +51,7 @@ export default function FeaturedProjects() {
             <article key={project.id} className="project-card">
               <div className="project-card-header">
                 <div className="project-role-badge">
-                  <span className="project-company-tag" style={{ color: project.accentColor }}>
+                  <span className="project-company-tag">
                     {project.company}
                   </span>
                   <span className="project-timeline">{project.timeline}</span>
@@ -64,7 +64,7 @@ export default function FeaturedProjects() {
               <div className="project-metrics-row">
                 {project.impactMetrics.slice(0, 4).map((m, mIdx) => (
                   <div key={mIdx} className="project-metric-item">
-                    <span className="project-metric-val" style={{ color: project.accentColor }}>
+                    <span className="project-metric-val">
                       {m.value}
                     </span>
                     <span className="project-metric-lbl">{m.label}</span>
@@ -80,7 +80,7 @@ export default function FeaturedProjects() {
                   </span>
                 ))}
                 {project.stack.length > 5 && (
-                  <span className="project-stack-badge" style={{ color: project.accentColor }}>
+                  <span className="project-stack-badge project-stack-badge-more">
                     +{project.stack.length - 5} more
                   </span>
                 )}
@@ -88,8 +88,8 @@ export default function FeaturedProjects() {
 
               {/* Card Footer */}
               <div className="project-card-footer">
-                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                  Role: <strong style={{ color: 'var(--text-secondary)' }}>{project.role}</strong>
+                <span className="project-role-label">
+                  Role: <strong>{project.role}</strong>
                 </span>
                 <button
                   className="btn-inspect"

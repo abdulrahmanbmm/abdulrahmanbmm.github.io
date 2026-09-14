@@ -9,7 +9,7 @@ export default function Education() {
         <div className="section-header">
           <div className="section-badge">Foundations & Honors</div>
           <h2 className="section-title">
-            Education, Awards & <span className="section-title-gradient">Certifications</span>
+            Education, Awards & <span className="section-title-highlight">Certifications</span>
           </h2>
           <p className="section-description">
             Rigorous academic grounding in computer science coupled with continuous professional specialization.

@@ -26,7 +26,7 @@ export default function QuickPitch() {
         <div className="section-header">
           <div className="section-badge">Executive Summary</div>
           <h2 className="section-title">
-            Engineered for <span className="section-title-gradient">Scale, Performance & Impact</span>
+            Engineered for <span className="section-title-highlight">Scale, Performance & Impact</span>
           </h2>
           <p className="section-description">
             A 30-second brief for engineering managers and technical recruiters looking for a senior contributor who takes total ownership of the stack.

@@ -9,7 +9,7 @@ export default function Experience() {
         <div className="section-header">
           <div className="section-badge">Career Trajectory</div>
           <h2 className="section-title">
-            Professional <span className="section-title-gradient">Work Experience</span>
+            Professional <span className="section-title-highlight">Work Experience</span>
           </h2>
           <p className="section-description">
             A track record of high-concurrency systems, mobile deployments, and architectural ownership across venture-backed startups and consulting engagements.

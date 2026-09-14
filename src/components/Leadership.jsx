@@ -11,7 +11,7 @@ export default function Leadership() {
         <div className="section-header">
           <div className="section-badge">Community & Mentorship</div>
           <h2 className="section-title">
-            Leadership & <span className="section-title-gradient">Impact</span>
+            Leadership & <span className="section-title-highlight">Impact</span>
           </h2>
           <p className="section-description">
             Passionate about nurturing engineering communities, advocating for digital literacy, and mentoring developer talent across Africa.
