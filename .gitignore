@@ -1,1 +1,7 @@
-﻿
+node_modules/
+.vite/
+.DS_Store
+dist/
+dist-ssr/
+*.local
+index.html.old_static_backup
