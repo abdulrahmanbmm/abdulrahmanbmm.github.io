@@ -1,16 +1,28 @@
-import React, { useEffect } from 'react';
-import { X, ChevronLeft, ChevronRight, ExternalLink, Award, Calendar, Maximize2 } from 'lucide-react';
+import React, { useEffect, useCallback } from 'react';
+import { X, ChevronLeft, ChevronRight, ExternalLink, Calendar } from 'lucide-react';
 
 export default function PhotoModal({ isOpen, onClose, photo, photos = [], onSelectPhoto }) {
+  const currentIndex = photo && Array.isArray(photos)
+    ? photos.findIndex(p => p.url === photo.url)
+    : -1;
+
+  const navigate = useCallback((direction) => {
+    if (!Array.isArray(photos) || photos.length <= 1 || !onSelectPhoto) return;
+    let newIndex = currentIndex + direction;
+    if (newIndex < 0) newIndex = photos.length - 1;
+    if (newIndex >= photos.length) newIndex = 0;
+    onSelectPhoto(photos[newIndex]);
+  }, [currentIndex, photos, onSelectPhoto]);
+
   useEffect(() => {
     if (!isOpen) return;
 
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
         onClose();
-      } else if (e.key === 'ArrowRight' && photos.length > 1) {
+      } else if (e.key === 'ArrowRight') {
         navigate(1);
-      } else if (e.key === 'ArrowLeft' && photos.length > 1) {
+      } else if (e.key === 'ArrowLeft') {
         navigate(-1);
       }
     };
@@ -22,19 +34,9 @@ export default function PhotoModal({ isOpen, onClose, photo, photos = [], onSele
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen, photo, photos]);
+  }, [isOpen, onClose, navigate]);
 
   if (!isOpen || !photo) return null;
-
-  const currentIndex = photos.findIndex(p => p.url === photo.url);
-
-  const navigate = (direction) => {
-    if (photos.length <= 1 || !onSelectPhoto) return;
-    let newIndex = currentIndex + direction;
-    if (newIndex < 0) newIndex = photos.length - 1;
-    if (newIndex >= photos.length) newIndex = 0;
-    onSelectPhoto(photos[newIndex]);
-  };
 
   return (
     <div
@@ -54,7 +56,7 @@ export default function PhotoModal({ isOpen, onClose, photo, photos = [], onSele
             {photo.badge && (
               <span className="photo-badge-pill">{photo.badge}</span>
             )}
-            {photos.length > 1 && currentIndex !== -1 && (
+            {Array.isArray(photos) && photos.length > 1 && currentIndex !== -1 && (
               <span className="photo-counter-pill">
                 {currentIndex + 1} / {photos.length}
               </span>
@@ -84,7 +86,7 @@ export default function PhotoModal({ isOpen, onClose, photo, photos = [], onSele
 
         {/* Main Image Stage with Navigation */}
         <div className="photo-lightbox-stage">
-          {photos.length > 1 && (
+          {Array.isArray(photos) && photos.length > 1 && (
             <button
               onClick={() => navigate(-1)}
               className="photo-nav-btn photo-nav-prev"
@@ -100,10 +102,11 @@ export default function PhotoModal({ isOpen, onClose, photo, photos = [], onSele
               src={photo.url}
               alt={photo.title || 'Honors photo'}
               className="photo-lightbox-img"
+              loading="eager"
             />
           </div>
 
-          {photos.length > 1 && (
+          {Array.isArray(photos) && photos.length > 1 && (
             <button
               onClick={() => navigate(1)}
               className="photo-nav-btn photo-nav-next"

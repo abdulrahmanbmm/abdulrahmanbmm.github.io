@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUp, Github, Linkedin, Globe } from 'lucide-react';
 import { profileData } from '../data/profileData';
+import Signature from './Signature';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -10,9 +11,14 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-inner">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <div className="brand-monogram" style={{ width: '32px', height: '32px', fontSize: '0.85rem' }}>AB</div>
-          <span style={{ fontWeight: 800, fontSize: '1.1rem' }}>{profileData.name}</span>
+        {/* Architect Closing Signature Block */}
+        <div className="footer-closing-signature-wrapper">
+          <Signature variant="closing" />
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginTop: '1.5rem' }}>
+          <div className="brand-monogram" style={{ width: '34px', height: '34px', fontSize: '0.9rem' }}>AB</div>
+          <span style={{ fontWeight: 800, fontSize: '1.15rem', color: 'var(--text-primary)' }}>{profileData.name}</span>
         </div>
 
         <p style={{ maxWidth: '580px', fontSize: '0.9rem', color: 'var(--text-secondary)', textAlign: 'center' }}>
@@ -70,7 +76,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-copy">
-          © {new Date().getFullYear()} Abdulrahman Bello. All rights reserved. Engineered for performance and impact.
+          © {new Date().getFullYear()} Abdulrahman Bello. All rights reserved. Handcrafted &amp; engineered for performance and impact.
         </div>
       </div>
     </footer>

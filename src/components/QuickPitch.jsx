@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layers, Sparkles, TrendingUp, CheckCircle2 } from 'lucide-react';
 import { profileData } from '../data/profileData';
+import Signature from './Signature';
 
 const competencyIcons = [Layers, Sparkles, TrendingUp];
 
@@ -18,14 +19,21 @@ export default function QuickPitch() {
           </p>
         </div>
 
-        {/* Executive Narrative */}
-        <div className="executive-summary-box">
-          <div className="summary-intro-grid">
-            {profileData.executiveSummary.map((para, idx) => (
-              <p key={idx} className="executive-para">
-                {para}
-              </p>
-            ))}
+        {/* Executive Narrative & Official Signature Seal */}
+        <div className="executive-summary-wrapper">
+          <div className="executive-summary-box">
+            <div className="summary-intro-grid">
+              {profileData.executiveSummary.map((para, idx) => (
+                <p key={idx} className="executive-para">
+                  {para}
+                </p>
+              ))}
+            </div>
+
+            {/* Verified Digital Signature & Certificate Seal */}
+            <div className="executive-seal-container">
+              <Signature variant="seal" />
+            </div>
           </div>
         </div>
 

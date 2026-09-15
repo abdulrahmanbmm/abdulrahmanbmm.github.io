@@ -12,6 +12,7 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import PhotoModal from './components/PhotoModal';
+import AmbientBackground from './components/AmbientBackground';
 import { CheckCircle } from 'lucide-react';
 
 export default function App() {
@@ -63,6 +64,9 @@ export default function App() {
 
   return (
     <div className="app-layout">
+      {/* Dynamic Ambient Background Aura & Grid */}
+      <AmbientBackground />
+
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
       <main>
