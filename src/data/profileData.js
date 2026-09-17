@@ -15,7 +15,7 @@ export const profileData = {
   website: "https://abdulrahmanbmm.github.io",
   resumePdf: "Abdulrahman_Bello_Resume.pdf",
   coverLetterPdf: "Abdulrahman_Bello_CoverLetter.pdf",
-  avatarUrl: "images/IMG_6333.jpg",
+  avatarUrl: "images/about.jpg",
   avatarAltUrl: "images/about.jpg",
   availabilityStatus: "Open to Senior Software Engineer, Lead Mobile & Full-Stack Architect roles",
 
