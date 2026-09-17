@@ -56,7 +56,7 @@ export default function Navbar({ theme, toggleTheme }) {
       <div className="container navbar-container">
         <a href="#hero" className="brand-logo" onClick={(e) => { e.preventDefault(); handleNavClick('hero'); }}>
           <div className="brand-monogram">AB</div>
-          <span>Abdulrahman Bello</span>
+          <span>AB</span>
         </a>
 
         <nav className="nav-links" aria-label="Main Navigation">
