@@ -33,13 +33,13 @@ export default function Navbar({ theme, toggleTheme }) {
 
   const navItems = [
     { id: 'hero', label: 'Overview' },
-    { id: 'pitch', label: 'Summary' },
+    // { id: 'pitch', label: 'Summary' },
     { id: 'services', label: 'Services' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Case Studies' },
     { id: 'experience', label: 'Experience' },
-    { id: 'credentials', label: 'Credentials' },
-    { id: 'testimonials', label: 'Reviews' },
+    // { id: 'credentials', label: 'Credentials' },
+    // { id: 'testimonials', label: 'Reviews' },
     { id: 'contact', label: 'Contact' }
   ];
 
@@ -56,7 +56,7 @@ export default function Navbar({ theme, toggleTheme }) {
       <div className="container navbar-container">
         <a href="#hero" className="brand-logo" onClick={(e) => { e.preventDefault(); handleNavClick('hero'); }}>
           <div className="brand-monogram">AB</div>
-          <span>AB</span>
+          <span>Abdulrahman</span>
         </a>
 
         <nav className="nav-links" aria-label="Main Navigation">
@@ -122,14 +122,14 @@ export default function Navbar({ theme, toggleTheme }) {
             <Download size={16} />
             Resume (PDF)
           </a>
-          <a
+          {/* <a
             href={profileData.coverLetterPdf}
             download="Abdulrahman_Bello_CoverLetter.pdf"
             className="btn btn-secondary"
             style={{ flex: 1 }}
           >
             Cover Letter
-          </a>
+          </a> */}
         </div>
       </div>
     </header>

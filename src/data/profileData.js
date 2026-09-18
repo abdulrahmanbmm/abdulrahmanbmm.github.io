@@ -931,27 +931,27 @@ export const profileData = {
       url: "images/sellsrocket_will_be_there_me2.jpg",
       caption: "Official launch announcement poster featuring Abdulrahman Bello as Technical Head and Speaker for the Sells Rocket platform."
     },
-    {
-      id: "portrait-executive",
-      title: "Executive Studio Headshot",
-      subtitle: "Abdulrahman Bello",
-      category: "portraits",
-      categoryLabel: "Studio Portraits",
-      badge: "Executive",
-      date: "2025",
-      url: "images/IMG_6333.jpg",
-      caption: "Abdulrahman Bello — Senior Software Engineer, Full-Stack & Mobile Developer, Systems Architect."
-    },
-    {
-      id: "portrait-developer",
-      title: "Developer Studio Portrait",
-      subtitle: "Abdulrahman Bello",
-      category: "portraits",
-      categoryLabel: "Studio Portraits",
-      badge: "Engineering",
-      date: "2025",
-      url: "images/IMG_6313.jpg",
-      caption: "Abdulrahman Bello — 7+ years building high-concurrency Laravel & React Native systems, cloud infrastructure, and AI workflows."
-    }
+    // {
+    //   id: "portrait-executive",
+    //   title: "Executive Studio Headshot",
+    //   subtitle: "Abdulrahman Bello",
+    //   category: "portraits",
+    //   categoryLabel: "Studio Portraits",
+    //   badge: "Executive",
+    //   date: "2025",
+    //   url: "images/IMG_6333.jpg",
+    //   caption: "Abdulrahman Bello — Senior Software Engineer, Full-Stack & Mobile Developer, Systems Architect."
+    // },
+    // {
+    //   id: "portrait-developer",
+    //   title: "Developer Studio Portrait",
+    //   subtitle: "Abdulrahman Bello",
+    //   category: "portraits",
+    //   categoryLabel: "Studio Portraits",
+    //   badge: "Engineering",
+    //   date: "2025",
+    //   url: "images/IMG_6313.jpg",
+    //   caption: "Abdulrahman Bello — 7+ years building high-concurrency Laravel & React Native systems, cloud infrastructure, and AI workflows."
+    // }
   ]
 };

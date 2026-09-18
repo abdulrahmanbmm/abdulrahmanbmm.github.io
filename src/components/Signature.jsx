@@ -7,7 +7,7 @@ export default function Signature({ variant = 'default', className = '' }) {
         <div className="seal-badge-row">
           <div className="seal-badge">
             <span className="seal-dot"></span>
-            <span>VERIFIED ARCHITECT SIGNATURE</span>
+            <span>Software Engineer SIGNATURE</span>
           </div>
           <span className="seal-id">AUTH-AB-2025</span>
         </div>

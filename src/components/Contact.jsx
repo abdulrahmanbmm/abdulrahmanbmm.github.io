@@ -132,10 +132,10 @@ export default function Contact({ onShowToast }) {
             <div className="resume-download-banner">
               <div className="resume-download-title">Official Candidate Documents</div>
               <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
-                Grab an offline copy of my detailed resume or tailored cover letter formatted for hiring committees.
+                Grab an offline copy of my detailed resume formatted for hiring committees.
               </p>
               <div className="resume-download-btns">
-                <a
+                <br /><a
                   href={profileData.resumePdf}
                   download="Abdulrahman_Bello_Resume.pdf"
                   className="btn btn-primary"
@@ -144,7 +144,7 @@ export default function Contact({ onShowToast }) {
                   <Download size={16} />
                   <span>Resume (PDF)</span>
                 </a>
-                <a
+                {/* <a
                   href={profileData.coverLetterPdf}
                   download="Abdulrahman_Bello_CoverLetter.pdf"
                   className="btn btn-secondary"
@@ -152,7 +152,7 @@ export default function Contact({ onShowToast }) {
                 >
                   <FileText size={16} />
                   <span>Cover Letter</span>
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

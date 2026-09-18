@@ -54,14 +54,14 @@ export default function Hero({ onOpenContact, onOpenPhoto }) {
                 <span>Resume (PDF)</span>
               </a>
 
-              <a
+              {/* <a
                 href={profileData.coverLetterPdf}
                 download="Abdulrahman_Bello_CoverLetter.pdf"
                 className="btn btn-secondary"
               >
                 <FileText size={16} />
                 <span>Cover Letter</span>
-              </a>
+              </a> */}
 
               <a href="#contact" className="btn btn-outline" onClick={onOpenContact}>
                 <Mail size={16} />
@@ -100,7 +100,7 @@ export default function Hero({ onOpenContact, onOpenPhoto }) {
               >
                 <div className="portrait-verified-float">
                   <ShieldCheck size={14} color="#10b981" />
-                  <span>Verified Architect</span>
+                  <span>Software Engineer</span>
                 </div>
 
                 <div className="portrait-img-box">

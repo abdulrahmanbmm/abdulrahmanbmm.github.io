@@ -29,7 +29,7 @@ const proofCategories = [
   { id: 'awards', label: 'Trophies & Stage (7)' },
   { id: 'certs', label: 'Certificates & Diplomas (4)' },
   { id: 'leadership', label: 'Leadership & Events (2)' },
-  { id: 'portraits', label: 'Studio Portraits (2)' }
+  // { id: 'portraits', label: 'Studio Portraits (2)' }
 ];
 
 export default function Education({ onOpenPhoto }) {
