@@ -172,7 +172,7 @@ export default function Signature({ variant = 'default', className = '' }) {
   // Default compact hero signature
   return (
     <div className={`signature-hero-badge ${className}`}>
-      <span className="signature-hero-label">Signed by the Architect</span>
+      <span className="signature-hero-label">Signed</span>
       <div className="signature-hero-svg-box">
         <svg
           className="signature-svg"
